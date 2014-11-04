@@ -13,13 +13,13 @@ fi
 declare -a drives
 
 # For loops that print out each drive enclosure and slot number
-for x in `seq 8 9`; do
+for x in $(seq 8 9); do
   if [[ $x = 8 ]]; then
-    for y in `seq 0 20`; do
+    for y in $(seq 0 20); do
     drives+="$x:$y "
     done
   elif [[ $x = 9 ]]; then
-    for y in `seq 0 23`; do
+    for y in $(seq 0 23); do
     drives+="$x:$y "
     done
   fi
